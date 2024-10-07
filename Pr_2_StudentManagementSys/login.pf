@@ -1,0 +1,4 @@
+     A          R LOGINPFR
+     A            USERNAME      10A         COLHDG('USER NAME')
+     A            PASSWORD       8S 0       COLHDG('PASSWORD')
+     A          K USERNAME

@@ -1,0 +1,11 @@
+     A          R STUDENTPFR
+     A            STUID          4S 0       COLHDG('STUDENT ID')
+     A            STUNAME       30A         COLHDG('STUDENT NAME')
+     A            STUGEN         6A         COLHDG('STUDENT GENDER')
+     A            STUMAIL       30A         COLHDG('STUDENT EMAIL')
+     A            STUMOB        10S         COLHDG('STUDENT MOBILE')
+     A            STUSTR        20A         COLHDG('STUDENT STREAM')
+     A            PINCODE        4S 0       COLHDG('PIN CODE')
+     A            CITY          20A         COLHDG('CURRENT CITY')
+     A            COUNTRY       20A         COLHDG('COUNTRY')
+     A          K STUID
