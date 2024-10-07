@@ -1,0 +1,22 @@
+        /*
+        //* *********************************************************
+        //*           Presented By : Ettaki El Mehdi               **
+        //            Task         : Cl Program for Compilation    **
+        //            Date Release : 26-09-2023                    **
+        // **********************************************************
+        */
+
+             CRTRPGMOD  MODULE(SQUAD1/LEVMNGSYSR) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             CRTRPGMOD  MODULE(SQUAD1/CHECKUSER) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             CRTRPGMOD  MODULE(SQUAD1/MNGDASHB) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             CRTPGM     PGM(SQUAD1/MAINPGM) MODULE(SQUAD1/LEVMNGSYSR +
+                          SQUAD1/CHECKUSER SQUAD1/MNGDASHB)
+
+
+             CALL       PGM(SQUAD1/MAINPGM)

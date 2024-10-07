@@ -1,0 +1,210 @@
+    //* *********************************************************
+    //*           Presented By : Ettaki El Mehdi               **
+    //*           Task: Display File for Leave Management Sys  **
+    //*           Date Release : 29-09-2023                    **
+    //***********************************************************
+     
+     A*%%TS  SD  20240101  192512  SQUAD       REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A          R LOGIN_PAGE
+     A*%%TS  SD  20240101  192512  SQUAD       REL-V7R5M0  5770-WDS
+     A                                      CF03(03 'Exit')
+     A                                      OVERLAY
+     A                                  1  2'User:'
+     A                                      COLOR(WHT)
+     A                                  1 67'Date:'
+     A                                      COLOR(WHT)
+     A                                  2  2'Prog:'
+     A                                      COLOR(WHT)
+     A                                  2 29'Leave Management System'
+     A                                      COLOR(YLW)
+     A                                  2 67'Time:'
+     A                                      COLOR(WHT)
+     A                                  1 73DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(TRQ)
+     A                                  1  8USER
+     A                                      COLOR(TRQ)
+     A            S1PROGNAME    10A  O  2  8COLOR(TRQ)
+     A                                  1 35'Tech Ettaki'
+     A                                      COLOR(WHT)
+     A                                  8 24'Username:'
+     A                                 11 24'Password:'
+     A            S1ERRMSG      30A  O 13 14COLOR(RED)
+     A            S1USERNAME     8A  I  8 35COLOR(TRQ)
+     A            S1PASSWORD     8S 0I 11 35DSPATR(ND)
+     A                                  5 13'                                  -
+     A                                                            '
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                 15 13'                                  -
+     A                                                            '
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                 23  3'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                  2 73TIME
+     A                                      COLOR(TRQ)
+     A          R EMP_DASHB
+     A*%%TS  SD  20230929  202258  SQUAD       REL-V7R5M0  5770-WDS
+     A                                      CF03(03 'Exit')
+     A                                      CF12(12 'Cancel')
+     A                                      OVERLAY
+     A                                  1  3'User:'
+     A                                      COLOR(WHT)
+     A                                  1 35'Tech Ettaki'
+     A                                      COLOR(WHT)
+     A                                  1 66'Date:'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(TRQ)
+     A                                  2  3'Prog:'
+     A                                      COLOR(WHT)
+     A                                  2 29'Leave Management System'
+     A                                      COLOR(YLW)
+     A                                  2 66'Time:'
+     A                                      COLOR(WHT)
+     A                                  2 72TIME
+     A                                      COLOR(TRQ)
+     A                                  4 32'Employee Dashboard'
+     A                                      COLOR(GRN)
+     A                                  1  9USER
+     A                                      COLOR(TRQ)
+     A            S1PROGNAME    10A  O  2  9COLOR(TRQ)
+     A                                  6  3'                                  -
+     A                                                                         -
+     A                                              '
+     A                                      DSPATR(RI)
+     A                                      COLOR(TRQ)
+     A                                  8  3'----------------------------- Empl-
+     A                                      oyee Details -----------------------
+     A                                      --------'
+     A                                      COLOR(WHT)
+     A                                 10  3'Employee Id.........:'
+     A                                      COLOR(WHT)
+     A                                 10 51'Leaves Availed.....:'
+     A                                      COLOR(WHT)
+     A                                 12  3'----------------------------'
+     A                                      COLOR(BLU)
+     A                                 12 34'Leave Balance'
+     A                                      COLOR(WHT)
+     A                                 12 50'------------------------------'
+     A                                      COLOR(BLU)
+     A                                 14  3'Earned Leave........:'
+     A                                      COLOR(WHT)
+     A                                 14 51'Casual Leave.......:'
+     A                                      COLOR(WHT)
+     A                                 16  3'----------------------------'
+     A                                      COLOR(BLU)
+     A                                 16 50'------------------------------'
+     A                                      COLOR(BLU)
+     A                                 16 36'Date Range'
+     A                                      COLOR(WHT)
+     A                                 18  3'From Date..:'
+     A                                      COLOR(WHT)
+     A            FROM_DATE      8S 0B 18 16
+     A  90                                  DSPATR(RI)
+     A  90                                  DSPATR(PC)
+     A                                 18 27'To Date..:'
+     A                                      COLOR(WHT)
+     A            TO_DATE        8S 0B 18 38
+     A  91                                  DSPATR(RI)
+     A  91                                  DSPATR(PC)
+     A                                 18 49'Leave Type:'
+     A                                      COLOR(WHT)
+     A            E1SELLEV       2Y 0B 18 62SNGCHCFLD((*NUMROW 1))
+     A                                      CHOICE(1 '>EL')
+     A                                      CHOICE(2 '>CL')
+     A                                 21  2'                                  -
+     A                                                                         -
+     A                                              '
+     A                                      DSPATR(RI)
+     A                                      COLOR(TRQ)
+     A            E1ERRMSG      30A  O 22  2COLOR(RED)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 16'F12=Cancel'
+     A                                      COLOR(BLU)
+     A            E1_EMPID       8A  O 10 26
+     A            E1_LEVEARN     4A  O 14 26
+     A            E1LEVAVAIL     4A  O 10 73
+     A            E1_LEVCASL     4A  O 14 73
+     A          R MNG_DASHB
+     A*%%TS  SD  20230929  202016  SQUAD       REL-V7R5M0  5770-WDS
+     A                                      CF03(03 'Exit')
+     A                                      CF12(12 'Cancel')
+     A                                      CF06(06 'Update')
+     A                                      OVERLAY
+     A                                  1  2'User:'
+     A                                      COLOR(WHT)
+     A                                  1 35'Tech Ettaki'
+     A                                      COLOR(WHT)
+     A                                  1 66'Date:'
+     A                                      COLOR(WHT)
+     A                                  2  2'Prog:'
+     A                                      COLOR(WHT)
+     A                                  2 29'Leave Management System'
+     A                                      COLOR(YLW)
+     A                                  2 66'Time:'
+     A                                      COLOR(WHT)
+     A                                  4 32'Manager Dashboard'
+     A                                      COLOR(WHT)
+     A                                  1  8USER
+     A                                      COLOR(TRQ)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(TRQ)
+     A            S1PROGNAME    10A  O  2  8COLOR(TRQ)
+     A                                  2 72TIME
+     A                                      COLOR(TRQ)
+     A                                  6  2'                                  -
+     A                                                                         -
+     A                                               '
+     A                                      DSPATR(RI)
+     A                                      COLOR(GRN)
+     A                                  8 33'Employee Details'
+     A                                      COLOR(WHT)
+     A                                 10  4'Employee Id........:'
+     A                                      COLOR(WHT)
+     A            M1_EMPID       8A  B 10 26
+     A                                 10 48'Leaves Availed........:'
+     A                                      COLOR(WHT)
+     A            M1LEVAVAIL     4S 0B 10 73
+     A  95                                  DSPATR(RI)
+     A  95                                  DSPATR(PC)
+     A                                 13 34'Leaves Balance'
+     A                                      COLOR(WHT)
+     A                                  8  2'-----------------------------'
+     A                                      COLOR(BLU)
+     A                                  8 51'-----------------------------'
+     A                                      COLOR(BLU)
+     A                                 13  2'------------------------------'
+     A                                      COLOR(BLU)
+     A                                 13 50'------------------------------'
+     A                                      COLOR(BLU)
+     A                                 15  4'Earned Leave.......:'
+     A                                      COLOR(WHT)
+     A            M1_LEVEARN     4S 0B 15 26
+     A  96                                  DSPATR(RI)
+     A  96                                  DSPATR(PC)
+     A                                 15 48'Casual Leave..........:'
+     A                                      COLOR(WHT)
+     A            M1_LEVCASL     4S 0B 15 73
+     A  97                                  DSPATR(RI)
+     A  97                                  DSPATR(PC)
+     A                                 19 29'Press F6 to Update Data'
+     A                                      COLOR(BLU)
+     A                                 21  2'                                  -
+     A                                                                         -
+     A                                               '
+     A                                      DSPATR(RI)
+     A                                      COLOR(GRN)
+     A            M1_ERRMSG     30A  O 22  2COLOR(RED)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 15'F12=Cancel'
+     A                                      COLOR(BLU)
+     A            UPDATE_MSG    25A  O 22 54COLOR(WHT)

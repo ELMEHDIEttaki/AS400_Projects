@@ -1,0 +1,13 @@
+// ************************************************** *
+//            Case Study for Leave Management System  *
+//                                                    *
+// ************************************************** *
+
+ 1 - Login Form Screen
+ 2 - LOGIN PF Structure
+ 3 - Logic TS01 For Login Portal
+ 4 - Employee Dashboard <EMP_DASHB>
+ 5 - EMPLEVDTL PF Structure
+ 6 - Logic for Employee Dashboard
+ 7 - Manager Dashboard <MNG_DASHB>
+ 8 - Logic for Manager Dashboard

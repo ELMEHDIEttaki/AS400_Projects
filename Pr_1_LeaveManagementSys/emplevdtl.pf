@@ -1,0 +1,6 @@
+                R EMPLEVDTLR
+                  E_EMPID        8A         COLHDG('EMPLOYEE ID')
+                  E_LEVAVAIL     4S 0       COLHDG('LEAVES AVAILED')
+                  E_ELBAL        4S 0       COLHDG('EL BALANCE')
+                  E_CLBAL        4S 0       COLHDG('CL BALANCE')
+                K E_EMPID

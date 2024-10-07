@@ -1,0 +1,5 @@
+     A          R LOGINR
+     A            USERNAME       8A         COLHDG('USER NAME')
+     A            PASSWORD       8S 0       COLHDG('PASSWORD')
+     A            USERTYPE       1A         COLHDG('USER TYPE')
+     A          K USERNAME

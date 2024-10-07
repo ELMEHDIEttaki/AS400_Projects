@@ -1,0 +1,32 @@
+         /*
+        //* *********************************************************
+        //*           Presented By : Ettaki El Mehdi               **
+        //            Task         : Cl Program for Debugging      **
+        //            Date Release : 26-09-2023                    **
+        // **********************************************************
+        */
+ 
+ STRPROGRAM: PGM
+
+
+             CRTRPGMOD  MODULE(SQUAD1/LEVMNGSYSR) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             CRTRPGMOD  MODULE(SQUAD1/CHECKUSER) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             CRTRPGMOD  MODULE(SQUAD1/MNGDASHB) +
+                          SRCFILE(SQUAD1/QLVEMNGSYS) DBGVIEW(*SOURCE)
+
+             ENDDBG
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(PROCESS1))
+
+ PROCESS1:   CRTPGM     PGM(SQUAD1/MAINPGM) MODULE(SQUAD1/LEVMNGSYSR +
+                          SQUAD1/CHECKUSER SQUAD1/MNGDASHB)
+
+             STRDBG     PGM(SQUAD1/MAINPGM) UPDPROD(*YES) OPMSRC(*YES)
+
+             CALL       PGM(SQUAD1/MAINPGM)
+
+             ENDDBG
+ ENDPROGRAM: ENDPGM
