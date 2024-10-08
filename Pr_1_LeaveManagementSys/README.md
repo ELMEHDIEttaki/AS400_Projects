@@ -83,6 +83,7 @@ qlvemngsys/
 - Navigation options (F3=Exit, F12=Cancel)
 
 #### Sample Code Structure
+```
 0006.00 **Free
 0007.00    // ** Control Options    **                                                  230924 
 0008.00                                                                                 230924 
@@ -97,6 +98,7 @@ qlvemngsys/
 0017.00       Dcl-F EmpLevDtl Disk Usage(*Input:*Output:*Update) Keyed ; //TS02         230925 
 0018.00                                                                                 230924 
 0019.00    // ** Variables Declaration      **                           //TS01         230924 
+```
 
 
 ## Database Design
@@ -180,7 +182,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Contact
 
 For support or queries, contact:
-- Tech Ettaki
+- Tech Ettaki El Mehdi
 - Email: [el.ettaki22@gmail.com](mailto:placeholder@email.com)
 
 Would you like me to:
