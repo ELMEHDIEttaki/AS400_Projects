@@ -25,22 +25,7 @@ The Leave Management System is an IBM i (AS/400) based application designed to s
 
 ### Component Diagram
 
-User Interface Layer:
-
-![UI Layer](images/application_layer.png)
-
-            levmngsysd.dspf  
-                  ▲  
-                  │  
-                  ▼    
-            levmngsysr.rpgle ◄─► checkuser.rpgle  
-                  ▲  
-                  │  
-                  ▼  
-Data Access Layer:
-![Data Access Layer](images/data_access.png)
-emplevedtl.pf, login.pf
-
+![Component](images/Component_Diagram.png)
 
 ### Workflow
 ![Workflow](images/Workflow.png)
