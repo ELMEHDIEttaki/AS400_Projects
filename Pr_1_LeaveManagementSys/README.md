@@ -51,6 +51,8 @@ emplevedtl.pf, login.pf
 - **mngdashb.rpgle**: Module for Login Validation Manager
 - **emplevedtl.pf**: Physical File for Leave Details
 - **login.pf**: Physical File for Login Details
+- **compiler.clle**: Cl Program for Compilation
+- **debugger.clle**: Cl Program for Debugging
 
 ## Project Structure
 
