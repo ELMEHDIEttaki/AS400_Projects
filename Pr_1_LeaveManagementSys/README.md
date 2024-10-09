@@ -27,19 +27,18 @@ The Leave Management System is an IBM i (AS/400) based application designed to s
 
 User Interface Layer:
 
-![UI Layer](https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/49-Responsive-128.png)
+![UI Layer](images/application_layer.png)
 
-levmngsysd.dspf  
-       ▲  
-       │  
-       ▼  
-Application Layer  
-levmngsysr.rpgle ◄─► checkuser.rpgle  
-       ▲  
-       │  
-       ▼  
+            levmngsysd.dspf  
+                  ▲  
+                  │  
+                  ▼    
+            levmngsysr.rpgle ◄─► checkuser.rpgle  
+                  ▲  
+                  │  
+                  ▼  
 Data Access Layer:
-![Data Access Layer](images/data-access.png)
+![Data Access Layer](images/data_access.png)
 emplevedtl.pf, login.pf
 
 
@@ -175,7 +174,7 @@ CALL COMPILER PARM('QLVEMNGSYS' 'SQUAD1')
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License
 
 ---
 
