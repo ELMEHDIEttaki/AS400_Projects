@@ -24,27 +24,27 @@ The Leave Management System is an IBM i (AS/400) based application designed to s
 ## System Architecture
 
 ### Component Diagram
-```
-User Interface Layer
-<mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/49-Responsive-128.png" vertex="1" parent="1"><mxGeometry x="360" y="190" width="128" height="128" as="geometry"/></mxCell></root></mxGraphModel>
 
-levmngsysd.dspf
-       ▲
-       │
-       ▼
-![Application Layer](Pr_1_LeaveManagementSys/images/application_layer.png)
-levmngsysr.rpgle ◄─► checkuser.rpgle
-       ▲
-       │
-       ▼
+User Interface Layer:
+
+![UI Layer](https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/49-Responsive-128.png)
+
+levmngsysd.dspf  
+       ▲  
+       │  
+       ▼  
+Application Layer  
+levmngsysr.rpgle ◄─► checkuser.rpgle  
+       ▲  
+       │  
+       ▼  
 Data Access Layer:
-![Data Access Layer](Pr_1_LeaveManagementSys/images/Data_Access.svg)
-
+![Data Access Layer](images/data-access.png)
 emplevedtl.pf, login.pf
-```
+
 
 ### Workflow
-![Workflow](Pr_1_LeaveManagementSys/images/Leave_Mng_Sys_Workflow.svg)
+![Workflow](images/Workflow.png)
 ### Core Components
 - **levmngsysr.rpgle**: Main Program for Leave Mangement System
 - **levmngsysd.dspf**: Display file for Leave Management System
@@ -71,10 +71,10 @@ qlvemngsys/
 ## Interfaces
 
 ### Manager Dashboard
-![Manager Dashboard](Pr_1_LeaveManagementSys/images/Manager_Dashboard.png)
+![Manager Dashboard](images/Manager_Dashboard.png)
 
 ### Employee Dashboard
-![Employee Dashboard](Pr_1_LeaveManagementSys/images/Employee_Dashboard.png)
+![Employee Dashboard](images/Employee_Dashboard.png)
 
 #### Features
 - Employee details display
@@ -150,7 +150,7 @@ qlvemngsys/
 3. Update production library
 
 ```
-CALL COMPILER PARM('LVEMNG' 'PRODLIB')
+CALL COMPILER PARM('QLVEMNGSYS' 'SQUAD1')
 ```
 
 ## Testing
