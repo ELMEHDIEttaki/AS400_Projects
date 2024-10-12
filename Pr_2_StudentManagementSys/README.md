@@ -36,7 +36,7 @@ The system follows a traditional mainframe architecture, with tight integration 
 ### Component Diagram
 
 The following diagram illustrates the main components of the Student Management System and their interactions:
-[!System Component](Student_Management_System_Component_Diagram.png)
+![System Component](Student_Management_System_Component_Diagram.png)
 
 This diagram shows:
 - The central role of the STDMNGSYSR RPGLE program in interacting with all other components.
@@ -48,7 +48,7 @@ This diagram shows:
 ### Workflow Diagram
 
 The following diagram illustrates the main workflow of the Student Management System:
-[!Workflow](Student_Management_Sys_Workflow.png)
+![Workflow](Student_Management_Sys_Workflow.png)
 
 This workflow diagram illustrates:
 - The user authentication process, including the password reset option.
