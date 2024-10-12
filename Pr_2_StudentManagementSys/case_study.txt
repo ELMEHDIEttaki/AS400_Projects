@@ -1,0 +1,8 @@
+IBMi Project
+
+Case Student Topic : "Student Management System"
+Case Study Functionalities:
+Login          : User can login into the system using credentials.
+Add Student    : User can add new Student to the existing system.
+Update Student : User can update the existing Student details.
+Delete Student : User can delete the existing Student from the system.

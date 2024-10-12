@@ -3,8 +3,7 @@
         // ************************************************************
         // ** Presented By : El Mehdi Ettaki                          *
         // ** Project      : Student Management System                *
-        // ** Date         : 15-09-2023                               *
-        //              ** Case Study Development                     *
+        // ** Start Date   : 15-09-2023                               *
         // ************************************************************
 
         // ** Control Options  **
@@ -93,7 +92,6 @@
                  Reset *In75                     ;
                  Reset *In76                     ;
                  Reset *In77                     ;
-
                  Reset *In86                     ;
                  Reset *In87                     ;
                  Reset *In88                     ;
@@ -237,13 +235,12 @@
 
         // ** Refresh Option Screen : Logic for F5 option **
                   If *In05 = *On                ;
-                //Select                        ;
-                  //When *In05 = *On              ;
-                     readc dspsfl                  ;
-                   //Reset *In05                ;
                      Reset SFL_OPTION           ;
-                     Update DSPSFL              ;
-                   //Write DSPSFL               ;
+                     Readc DSPSFL               ;
+                     Dow Not %Eof               ;
+                        Update DSPSFL           ;
+                        Readc DSPSFL            ;
+                     Enddo                      ;
                   Endif                         ;
 
         // ** Add Records option Screen : Logic for F6 option **
@@ -255,12 +252,13 @@
                      Reset  R1ERRMSG            ;
                      S1PROGNAME = 'STDMNGSYS'   ;
                      Dow *In03 = *Off           ;
-                         Reset *In12            ;
+                      // Reset *In12            ;
                          Reset *In05            ;
                          Exfmt ADDDATA          ;
                          If *In12 = *On         ;
                           //Exsr $ResetInd      ;
-                            Leave               ;
+                          //Leave               ;
+                            Exfmt DSPSFLCTL     ;
                          Endif                  ;
 
         // ** Refresh Screen for Add Student Screen : Logic for F5 Option
